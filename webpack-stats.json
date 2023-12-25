@@ -1,0 +1,16 @@
+{
+  "status": "done",
+  "assets": {
+    "frontend-fad84be298341154cd5c.js": {
+      "name": "frontend-fad84be298341154cd5c.js",
+      "path": "C:\\Users\\deepe\\OneDrive\\Desktop\\render\\django_react_starter\\frontend\\static\\frontend\\frontend-fad84be298341154cd5c.js",
+      "publicPath": "static/frontend/frontend-fad84be298341154cd5c.js"
+    }
+  },
+  "chunks": {
+    "frontend": [
+      "frontend-fad84be298341154cd5c.js"
+    ]
+  },
+  "publicPath": "static/frontend/"
+}
