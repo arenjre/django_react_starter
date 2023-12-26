@@ -22,7 +22,3 @@ urlpatterns = [
     path("", include("frontend.urls"))
 ]
 
-
-def fu():
-    import pdb;pdb.set_trace()
-    pass
