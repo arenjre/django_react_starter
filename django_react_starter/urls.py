@@ -21,3 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("frontend.urls"))
 ]
+
+
+def fu():
+    import pdb;pdb.set_trace()
+    pass
