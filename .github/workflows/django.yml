@@ -51,9 +51,9 @@ jobs:
 
       - name: Install SSH key
         run: |
-          echo "Win#755855" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa 16.16.207.23 >> ~/.ssh/known_hosts
+          echo "Win#755855" > id_rsa
+          chmod 600 id_rsa
+          ssh-keyscan -t rsa 16.16.207.23 >> known_hosts
 
       - name: Deploy code
         run: |
