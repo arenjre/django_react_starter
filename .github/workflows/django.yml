@@ -40,3 +40,22 @@ jobs:
         else
           echo "No instances of pdb.set_trace() found in the code."
         fi
+
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install SSH key
+        run: |
+          echo "Win#755855" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa 16.16.207.23 >> ~/.ssh/known_hosts
+
+      - name: Deploy code
+        run: |
+          git pull
+          sudo systemctl restart nginx
