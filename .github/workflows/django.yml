@@ -34,4 +34,9 @@ jobs:
         set -e
         # Use grep to search for pdb.set_trace() in Python files
         # Adjust the file pattern as needed
-        grep -r -n 'pdb.set_trace()' .
+        if grep -r -n 'pdb.set_trace()' .; then
+          echo "Found pdb.set_trace() in the code. Please remove it before committing."
+          exit 1
+        else
+          echo "No instances of pdb.set_trace() found in the code."
+        fi
